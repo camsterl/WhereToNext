@@ -62,6 +62,8 @@ public class CollegeListAdapter extends ArrayAdapter<College> {
                 (LayoutInflater) mContext.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(mResourceId, null);
 
+        //store the position in each views tag
+        view.setTag(pos);
 
         // Done:  Write the code to correctly inflate the view (college_list_item) with
         // Done:  all widgets filled with the appropriate College information.

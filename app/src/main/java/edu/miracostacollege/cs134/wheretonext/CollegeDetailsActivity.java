@@ -31,11 +31,11 @@ public class CollegeDetailsActivity extends AppCompatActivity {
 
 
         Intent detailsIntent = getIntent();
-        String name = detailsIntent.getStringExtra("Name");
-        int population = detailsIntent.getIntExtra("Population", 0);
-        float tuition = detailsIntent.getFloatExtra("Tuition", 0.0f);
-        float rating = detailsIntent.getFloatExtra("Rating", 0.0f);
-        String imageName = detailsIntent.getStringExtra("ImageName");
+        String name = detailsIntent.getStringExtra("name");
+        int population = detailsIntent.getIntExtra("population", 0);
+        float tuition = detailsIntent.getFloatExtra("tuition", 0.0f);
+        float rating = detailsIntent.getFloatExtra("rating", 0.0f);
+        String imageName = detailsIntent.getStringExtra("imageName");
 
         AssetManager am = this.getAssets();
         try {
