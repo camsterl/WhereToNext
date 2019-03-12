@@ -1,0 +1,47 @@
+{
+  "Colleges": [
+    {
+      "name": "UC San Diego",
+      "Population": 33735,
+      "Tuition":20212,
+      "Rating":4.4,
+      "imageName": "ucsd.png"
+    },
+    {
+      "name": "UC Los Angles",
+      "Population": 43301,
+      "Tuition":25308,
+      "Rating":4.5,
+      "imageName": "ucla.png"
+    },
+    {
+      "name": "UC Irvine",
+      "Population": 31551,
+      "Tuition":15026.47,
+      "Rating":4.3,
+      "imageName":"uci.png"
+    },
+    {
+      "name": "UC Berkly",
+      "Population": 42082,
+      "Tuition":14068,
+      "Rating":4.7,
+      "imageName": "ucb.png"
+    },
+    {
+      "name": "CSU Long Beach",
+      "Population":37430,
+      "Tuition":6452,
+      "Rating":4.4,
+      "imageName": "csulb.png"
+    },
+    {
+      "name": "CSU Fullerton",
+      "Population":38948,
+      "Tuition":6437,
+      "Rating":4.5,
+      "imageName": "csuf.png"
+    }
+
+  ]
+}
