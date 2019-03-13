@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RatingBar;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.zip.Inflater;
 
 import edu.miracostacollege.cs134.wheretonext.model.College;
 import edu.miracostacollege.cs134.wheretonext.model.JSONLoader;
@@ -22,11 +25,20 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView collegesListView;
     List<College> collegeList;
+    EditText nameEditText;
+    EditText populationEditText;
+    EditText tuitionEditText;
+    RatingBar collegeRatingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        collegesListView.setAdapter(collegesListAdapter);
+        collegesListView = findViewById(R.id.collegeListView);
+        nameEditText = findViewById(R.id.nameEditText);
+        populationEditText = findViewById(R.id.populationEditText);
+         tuitionEditText = findViewById(R.id.tuitionEditText);
+         collegeRatingBar = findViewById(R.id.collegeRatingBar);
 
 
         // Done:  Fill the collegesList with all Colleges from the database
@@ -38,11 +50,15 @@ public class MainActivity extends AppCompatActivity {
         catch(IOException e){
             Log.e("Where2Next", e.getMessage());
         }
-        collegesListView = findViewById(R.id.collegeListView);
+
         // TODO:  Connect the list adapter with the list
         // TODO:  Set the list view to use the list adapter
         collegesListAdapter = new CollegeListAdapter(this, R.layout.activity_college_list_item, collegeList);
-        collegesListView.setAdapter(collegesListAdapter);
+
+        ArrayAdapter<> adapter = new MyListAdapter();
+        ListView list =  (ListView)getActivity().findViewById(R.id.client_listView);
+        list.setAdapter(adapter);
+
 
 
     }
